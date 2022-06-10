@@ -12,24 +12,26 @@
 </head>
 <body>
     <!-- sticky header, search bar left w/ button 30% width, page title right 70% width -->
-    <header>
-        <div id="searchBar"></div>
+    <header class="columns">
+        <div id="searchBar">
+            <input class="input is-rounded" placeholder="What breed would you like to search?"></input>
+        </div>
         <div id="buttonContainer">
-        <button id="findDog" class="button">Find a Dog</button>
+            <button id="findDog" class="button" type="submit">Find a Dog</button>
         </div>
         <div id="pageTitle">
             <h1>Dog Image Search with Bonus</h1>
         </div>
     </header>
     <!-- container for main content/dynamic content -->
-    <div id="mainContentContainer">
+    <div class="columns" id="mainContentContainer">
         <!-- recent search history left side of screen, 30% width of screen, should go to bottom of screen at smaller/mobile screens -->
-        <div id="recentSearchHistoryContainer">
+        <div class="column is-two-fifths" id="recentSearchHistoryContainer">
             <h2>Recent Search History</h2>
             <p>search history</p>
         </div>
         <!-- dog image and dog fact column, right side of screen, 70% width of screen, on smaller screens image should go on top of fact -->
-        <div id="imageFactContainer">
+        <div class="column is-three-fifths" id="imageFactContainer">
             <div id="dogImage">image</div>
             <div id="dogFact">fact</div>
         </div>
