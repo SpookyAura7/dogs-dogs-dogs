@@ -12,14 +12,21 @@
 </head>
 <body>
     <!-- sticky header, search bar left w/ button 30% width, page title right 70% width -->
-    <header>
-        <div id="searchBar"></div>
-        <div id="buttonContainer">
-        <button id="findDog" class="button">Find a Dog</button>
-        </div>
-        <div id="pageTitle">
+    <header class="header navbar-fixed-top columns" id="theHeader">
+        <div class="navbar-start column is-one-third level">
+            <div id="searchBar" class="field"></div>
+                <p class="control is-expanded has-icons-right level-left">
+                    <input class="input" type="search" placeholder="Search..."/>
+                    
+                </p>
+                <div id="buttonContainer" class="level-right">
+                    <button id="findDog" class="button is-primary">Find a Dog</button>
+                </div>
+        </div class="navbar-end level-item has-text-centered">
+            <div id="pageTitle" class="column is-two-thirds has-text-centered">
             <h1>Dog Image Search with Bonus</h1>
-        </div>
+            </div>
+        
     </header>
     <!-- container for main content/dynamic content -->
     <div id="mainContentContainer">
