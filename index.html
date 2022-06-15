@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bulma linking -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <!-- CSS Stylesheet linking -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Dog Image Search with Bonus</title>
+</head>
+
+<body>
+    <!-- sticky header, search bar left w/ button 30% width, page title right 70% width -->
+    <header class="header navbar-fixed-top columns level" id="theHeader">
+        <div class="navbar-start row column is-one-third">
+            <div class="field column is-three-fifths"></div>
+                <p class="control is-expanded has-icons-right level-left">
+                    <input id="searchBar" class="input" type="search" placeholder="Search..."/>
+                    
+                </p>
+                <div id="buttonContainer" class="level-right column is-two-fifths">
+                    <button id="findDog" class="button is-primary">Find a Dog</button>
+                </div>
+        </div class="navbar-end level-item has-text-centered">
+            <div id="pageTitle" class="column is-two-thirds has-text-centered">
+            <h1>Dog Image Search with Bonus</h1>
+            </div>
+        
+    </header>
+    <!-- container for main content/dynamic content -->
+    <div id="mainContentContainer" class="tile is-ancestor">
+        <!-- recent search history left side of screen, 30% width of screen, should go to bottom of screen at smaller/mobile screens -->
+        <div id="recentSearchHistoryContainer" class="tile">
+            <h2>Recent Search History</h2>
+            <p id="searchHistory">search history</p>
+            <button id="clearbtn"> Clear</button>
+        </div>
+        <!-- dog image and dog fact column, right side of screen, 70% width of screen, on smaller screens image should go on top of fact -->
+        <div id="imageFactContainer" class="tile is-parent is-verticle">
+            <img id="dogImage" class="tile is-child block">
+            <div id="dogFact" class="tile is-child block"></div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!--<script src="./assets/js/apifetch.js"></script>-->
+</body>
+
+</html>
