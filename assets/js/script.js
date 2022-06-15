@@ -4,7 +4,7 @@ var dogInputEl = document.getElementById("searchBar");
 var dogImageEl = document.getElementById("dogImage");
 var newsEl = document.getElementById("dogFact");
 var breedList = JSON.parse(localStorage.getItem("Breed"))
-var dogHist = document.querySelector("#dogHistory")
+var dogHist = document.querySelector("#searchHistory")
 var bad = false;
 var clrbtn = document.getElementById("clearbtn")
 //CLICK TO WORK----------------------------------------------------------------------
@@ -39,29 +39,7 @@ var pullStorage = function () {
 if(localStorage.getItem("Breed") != null){
     dogHist.innerText = JSON.parse(localStorage.getItem("Breed"));
 }
-//---convert to buttons
-// if(breedList.length < 10) {
-//     var past = document.createElement("button")
-//     past.text(`${breedList[0]}`);
-//     past.attr("class", "col-8 my-1 btn btn-blue");
-//     dogHist.append(past);
-// } else {
-//     for(var i = 0; i < 10; i++) {
-//         return;
-//     }
-// } 
-//var i = 0;
-//while(i < breedList.length && i < 10) {
-//    var pst = $("<button>");
-//    pst.text(`${breedList[i]}`);
-//    pst.attr("class", "col-8 my-1 btn btn-dark");
-//    dogHist.append(pst);
-//    i++;
 }
-//dogHist.children("button").on("click", getData)
-//------------
-
-
 //API-----------------------------------------------------------------------------
 var getDogPic = function (event) {
     var dogInput = document.getElementById("searchBar").value;
@@ -73,12 +51,7 @@ var getDogPic = function (event) {
         response.json().then(function (data) {
             console.log(data);
             //DISPLAYS IN IMG INSTEAD OF CREATING A NEW ONE
-            document.getElementById("test").src=data.message;
-
-            // create element image and append to page
-            //var newImage = document.createElement("img");
-            //newImage.src = data.message;
-            //dogImageEl.appendChild(newImage);
+            document.getElementById("dogImage").src=data.message;
         })
     })
         .catch(function (error) {
