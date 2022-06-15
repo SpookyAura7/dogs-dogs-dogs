@@ -12,8 +12,8 @@
 </head>
 <body>
     <!-- sticky header, search bar left w/ button 30% width, page title right 70% width -->
-    <header class="header navbar-fixed-top columns" id="theHeader">
-        <div class="navbar-start column is-one-third level">
+    <header class="header navbar-fixed-top columns level" id="theHeader">
+        <div class="navbar-start column is-one-third">
             <div id="searchBar" class="field"></div>
                 <p class="control is-expanded has-icons-right level-left">
                     <input class="input" type="search" placeholder="Search..."/>
@@ -29,16 +29,16 @@
         
     </header>
     <!-- container for main content/dynamic content -->
-    <div id="mainContentContainer">
+    <div id="mainContentContainer" class="tile is-ancestor">
         <!-- recent search history left side of screen, 30% width of screen, should go to bottom of screen at smaller/mobile screens -->
         <div id="recentSearchHistoryContainer">
             <h2>Recent Search History</h2>
             <p>search history</p>
         </div>
         <!-- dog image and dog fact column, right side of screen, 70% width of screen, on smaller screens image should go on top of fact -->
-        <div id="imageFactContainer">
-            <div id="dogImage">image</div>
-            <div id="dogFact">fact</div>
+        <div id="imageFactContainer" class="tile is-parent is-verticle">
+            <div id="dogImage" class="tile is-child">image</div>
+            <div id="dogFact" class="tile is-child">fact</div>
         </div>
     </div>
 <script src="./assets/js/script.js"></script>
