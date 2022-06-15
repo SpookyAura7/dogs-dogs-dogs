@@ -21,7 +21,7 @@ var getBreedList = function () {
 
 getBreedList();
 
-var getDogPic = function (dogInput) {
+var getDogPic = function () {
   //API call using input from the search box(future state) to find dog pics
   var picGrabberAPI = `https://dog.ceo/api/breed/${dogInput}/images/random`;
 

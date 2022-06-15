@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,17 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Dog Image Search with Bonus</title>
 </head>
+
 <body>
     <!-- sticky header, search bar left w/ button 30% width, page title right 70% width -->
+    
+    
+    
+    <!-- MOVED FIND DOG ID TO BUTTON-->
     <header class="columns">
-        <div id="searchBar">
-            <input class="input is-rounded" placeholder="What breed would you like to search?"></input>
+        <div>
+            <input id="searchBar" class="input is-rounded" type="text"
+                placeholder="What breed would you like to search?"></input>
         </div>
         <div id="buttonContainer">
             <button id="findDog" class="button" type="submit">Find a Dog</button>
@@ -26,17 +33,30 @@
     <!-- container for main content/dynamic content -->
     <div class="columns" id="mainContentContainer">
         <!-- recent search history left side of screen, 30% width of screen, should go to bottom of screen at smaller/mobile screens -->
+        
+        
+        
+        <!--ADDED DOG HISTORY-->
         <div class="column is-two-fifths" id="recentSearchHistoryContainer">
             <h2>Recent Search History</h2>
-            <p>search history</p>
+            <p id="dogHistory">search history</p>
+            <button id="clearbtn"> Clear</button>
         </div>
         <!-- dog image and dog fact column, right side of screen, 70% width of screen, on smaller screens image should go on top of fact -->
         <div class="column is-three-fifths" id="imageFactContainer">
-            <div id="dogImage">image</div>
-            <div id="dogFact">fact</div>
+            <div id="dogImage"></div>
+            <div id="dogFact"></div>
+            
+        
+        <!--CREATED IMG ELEMENT-->
+            <img id="test">
         </div>
     </div>
-<script src="./assets/js/script.js"></script>
-<script src="./assets/js/apifetch.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!--<script src="./assets/js/apifetch.js"></script>-->
 </body>
+
 </html>
