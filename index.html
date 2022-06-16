@@ -12,48 +12,50 @@
     <title>Dog Image Search with Bonus</title>
 </head>
 
-<body>
+<body class="has-background-info-dark">
     <!-- sticky header, search bar left w/ button 30% width, page title right 70% width -->
-    
-    
-    
-    <!-- MOVED FIND DOG ID TO BUTTON-->
-    <header class="columns">
-        <div>
-            <input id="searchBar" class="input is-rounded" type="text"
-                placeholder="What breed would you like to search?"></input>
-        </div>
-        <div id="buttonContainer">
-            <button id="findDog" class="button" type="submit">Find a Dog</button>
-        </div>
-        <div id="pageTitle">
+    <header class="header navbar-fixed-top columns level has-text-primary-light is-size-3" id="theHeader">
+        <div id="pageTitle" class="column  has-text-centered ">
             <h1>Dog Image Search with Bonus</h1>
-            </div>
-        
+        </div>
+       
     </header>
+    <div class="navbar-start row column hero is-small is-primary">
+        <div class="field column is-three-fifths"></div>
+        <p class="control is-expanded has-icons-right level-left">
+            <input id="searchBar" class="input" type="search" placeholder="Search..." />
+
+        </p>
+        <div id="buttonContainer" class="level-right column is-two-fifths">
+            <button id="findDog" class="button is-primary button button is-info is-outlined">Find a Dog (must be in lower case!)</button>
+        </div>
+    </div class="navbar-end level-item has-text-centered">
     <!-- container for main content/dynamic content -->
-    <div class="columns" id="mainContentContainer">
+    <div id="mainContentContainer" class="tile is-ancestor">
         <!-- recent search history left side of screen, 30% width of screen, should go to bottom of screen at smaller/mobile screens -->
-        
-        
-        
-        <!--ADDED DOG HISTORY-->
-        <div class="column is-two-fifths" id="recentSearchHistoryContainer">
-            <h2>Recent Search History</h2>
-            <p id="searchHistory">search history</p>
-            <button id="clearbtn"> Clear</button>
-        </div>
-        <!-- dog image and dog fact column, right side of screen, 70% width of screen, on smaller screens image should go on top of fact -->
-        <div class="column is-three-fifths" id="imageFactContainer">
-            <img id="dogImage">
-            <div id="dogFact"></div>
-        </div>
+        <section class="section is-medium">
+            <div id="recentSearchHistoryContainer" class="tile is-child notification is-info">
+                <h2>Recent Search History</h2>
+                <p id="searchHistory" class="tile is-child box">search history</p>
+                <button id="clearbtn" class="tile is-child box button"> Clears on next search</button>
+            </div>
+        </section>
+        <section class="section is-medium">
+            <!-- dog image and dog fact column, right side of screen, 70% width of screen, on smaller screens image should go on top of fact -->
+            <div id="imageFactContainer" class="tile is-parent is-verticle">
+                <img id="dogImage" class="tile is-child block">
+        </section>
+        <section class="section is-medium ">
+            <div id="dogFact" ></div>
+        </section>
     </div>
+    <section class="section is-medium">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/P4YRaOXzNPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script>
-    <!--<script src="./assets/js/apifetch.js"></script>-->
 </body>
 
 </html>
