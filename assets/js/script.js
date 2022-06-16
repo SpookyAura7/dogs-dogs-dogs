@@ -82,7 +82,7 @@ var dailyNews = function () {
             'X-RapidAPI-Host': 'daily-dog-news.p.rapidapi.com'
         }
     };
-
+newsEl.classList.add("has-background-white-bis")
     fetch('https://daily-dog-news.p.rapidapi.com/news/ap', options)
         .then(response => response.json())
         .then(data => {
